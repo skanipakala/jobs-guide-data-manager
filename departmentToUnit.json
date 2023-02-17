@@ -1,0 +1,228 @@
+{
+    "GRAD": [
+        "Graduate School"
+    ],
+    "VPF": [
+        "CON",
+        "Controller"
+    ],
+    "INFO": [
+        "College of Information Studies"
+    ],
+    "EDUC": [
+        "College of Education",
+        "Counseling, Higher Education and Special Education",
+        "Dean",
+        "HDQM",
+        "Human Development and Quantitative Methodology",
+        "Student Services",
+        "Teaching and Learning, Policy and Leadership"
+    ],
+    "CMNS": [
+        "Astronomy",
+        "Atmospheric & Oceanic Science",
+        "Biology",
+        "Cell Biology & Molecular Genetics",
+        "Chemistry & Biochemistry",
+        "College of Computer, Math & Natural Sciences",
+        "Computer Science",
+        "Earth System Science Interdisciplinary Center",
+        "Entomology",
+        "Geology",
+        "IREAP",
+        "Inst for Physical Science & Technology",
+        "Institute for Advanced Computer Studies",
+        "Mathematics",
+        "Physics"
+    ],
+    "VPSA": [
+        "Chapel",
+        "Conferences & Visitor Services",
+        "Couns Ctr",
+        "Counseling Center",
+        "DS",
+        "Dining Services",
+        "Fraternity and Sorority Life",
+        "Golf Course",
+        "Office of Student Conduct",
+        "RL",
+        "Res Facilities",
+        "SU",
+        "Stamp Union",
+        "UHC",
+        "University Career Center",
+        "University Recreation & Wellness",
+        "VP Student Affairs"
+    ],
+    "SVPAAP": [
+        "EM",
+        "First",
+        "OIA",
+        "Office of Inst Research, Planning & Assessment",
+        "Office of International Affairs",
+        "Office of the Registrar Main",
+        "Sr VP Academic Affairs & Provost",
+        "Teaching and Learning Transformation Center"
+    ],
+    "ARHU": [
+        "Art",
+        "Art Gallery",
+        "Clarice Smith Performing Arts Center",
+        "Classics",
+        "College of Arts & Humanities",
+        "Communication",
+        "Consortium on Race, Gender & Ethnicity",
+        "David C. Driskell Center",
+        "Dean's",
+        "English",
+        "History",
+        "Linguistics",
+        "MD Institute for Technology in the Humanities",
+        "Philosophy",
+        "School of Languages, Literatures, and Cultures",
+        "School of Theatre, Dance & Performance Studies",
+        "Women, Gender and Sexuality Studies"
+    ],
+    "AGNR": [
+        "AES",
+        "Agricultural & Resource Economics",
+        "Animal & Avian Sciences",
+        "CIT",
+        "Dean",
+        "Environmental Science & Technology",
+        "Nutrition and Food Science",
+        "Office of International Programs",
+        "Plant Science & Landscape Architecture",
+        "UME",
+        "Veterinary Medicine Program"
+    ],
+    "JOUR": [
+        "Philip Merrill College of Journalism"
+    ],
+    "BSOS": [
+        "African American Studies",
+        "Anthropology",
+        "College of Behavioral & Social Sciences",
+        "Criminology & Criminal Justice",
+        "Ctr for Substance Abuse Research",
+        "Dean",
+        "Economics",
+        "GVPT",
+        "Geography",
+        "Government & Politics",
+        "Hearing & Speech Sciences",
+        "Joint Program in Survey Methodology",
+        "Psychology",
+        "Sociology"
+    ],
+    "PRES": [
+        "ICA",
+        "MFRI",
+        "ODI"
+    ],
+    "ENGR": [
+        "A. James Clark School of Engineering",
+        "Aerospace Engineering",
+        "Aerospace Wind Tunnel",
+        "Chemical & Biomolecular Engineering",
+        "Civil",
+        "Civil & Environmental Engineering",
+        "Dean",
+        "ECE",
+        "Electrical & Computer Engineering",
+        "Engineering Information Technology",
+        "Fire Protection Engineering",
+        "Fischell Department of Bioengineering",
+        "Institute for Systems Research",
+        "Maryland Applied Graduate Engineering",
+        "Maryland Technology Enterprise Institute",
+        "Materials Science & Engineering",
+        "Mechanical Engineering"
+    ],
+    "DIT": [
+        "ATI",
+        "Business Support Services",
+        "Division of Information Technology",
+        "EE",
+        "Enterprise Planning and Continuous Improvement"
+    ],
+    "ARCH": [
+        "Architecture Program",
+        "Center for Smart Growth Research & Education",
+        "Environmental Finance Center",
+        "Real Estate Development",
+        "School of Architecture, Planning, & Preservation",
+        "Urban Studies & Planning Program"
+    ],
+    "LIBR": [
+        "Libraries"
+    ],
+    "BMGT": [
+        "Accounting",
+        "Ctrs",
+        "Dean",
+        "Decision, Operations & Information Technologies",
+        "Executive MBA",
+        "Finance",
+        "IT Smith",
+        "Logistics, Business & Public Policy",
+        "Management & Organization",
+        "Marketing",
+        "Other Programs"
+    ],
+    "VPUR": [
+        "Alumni and Donor Relations",
+        "Development",
+        "VP University Relations"
+    ],
+    "VPA": [
+        "Environmental Safety, Sustainability & Risk",
+        "FM",
+        "Procurement & Busi Services",
+        "Procurement & Business Services",
+        "Public Safety",
+        "Transportation Services",
+        "VP Administration"
+    ],
+    "EXST": [],
+    "USG": [
+        "Universities at Shady Grove"
+    ],
+    "UGST": [
+        "Acad Achv",
+        "Academic Achievement Programs",
+        "Asian American Studies Program",
+        "College Park Scholars",
+        "HCOL",
+        "Honors College",
+        "Pre",
+        "Southern Management Leadership Program",
+        "The Office of Student Orientation and Transition",
+        "Undergraduate Studies"
+    ],
+    "PLCY": [
+        "Center for Global Sustainability",
+        "Ctr for Intl Security Studies at Maryland",
+        "Do Good Institute",
+        "Office of Executive Programs",
+        "School of Public Policy",
+        "The Civic Innovation Center"
+    ],
+    "SPHL": [
+        "Behavioral & Community Health",
+        "Dean",
+        "Epidemiology & Biostatistics",
+        "Family Science",
+        "Health Policy and Management",
+        "Kinesiology",
+        "Maryland Institute for Applied Environmental Health",
+        "School of Public Health"
+    ],
+    "VPR": [
+        "Applied Research Lab for Intelligence & Security",
+        "Economic Development & Innovation",
+        "Laboratory Animal Resources",
+        "Research Administration",
+        "Sponsored Programs Accounting and Compliance"
+    ]
+}
