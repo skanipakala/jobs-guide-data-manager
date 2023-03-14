@@ -33,7 +33,8 @@ pip install -r requirements.txt
  ```
  python updateWageData.py
  ```
-9. This will re-create all wage data related `.json` files and store them in `/exports` folder.
+9. ⚠️ Changes won't show on website until you sync them to the flutter web app (see instructions below)
+10. This will re-create all wage data related `.json` files and store them in `/exports` folder.
     - ⚠️  `unit_reviews.json` will not be updated. You must run `python updateReviews.py` for this
 
 
@@ -46,7 +47,8 @@ pip install -r requirements.txt
 ```
 python updateReviews.py
 ```
-5. Entries in the `unit_reviews.json` should be in the following structure:
+5. ⚠️ Changes won't show on website until you sync them to the flutter web app (see instructions below)
+6. Entries in the `unit_reviews.json` should be in the following structure:
 ```json
 {"A. James Clark School of Engineering": {
         "wage_range": {
@@ -72,38 +74,38 @@ python updateReviews.py
 ```
 
 
-### Updating files in Flutter app 📂
-10. Ensure you have Flutter installed on your PC. Follow instructions here: https://docs.flutter.dev/get-started/install
+### Syncing new wage/review data to Flutter app 📂
+1. Ensure you have Flutter installed on your PC. Follow instructions here: https://docs.flutter.dev/get-started/install
 
-11. Next clone the latest version of jobs guide app from repo
+2. Next clone the latest version of jobs guide app from repo
     ```    
     git clone https://github.com/skanipakala/dbk_jobs_guide.git
     ```
 
-12. Copy the updated `.json` files and paste it inside the `assets/data/` folder in the flutter app directory you just cloned. Follow the next step to actually deploy the app with new data
+3. Copy the updated `.json` files and paste it inside the `assets/data/` folder in the flutter app directory you just cloned. Follow the next step to actually deploy the app with new data
 
 ### Deploying Flutter web app with changes 🚀
-13. Ensure you have Firebase CLI installed. If not, follow steps here: https://firebase.google.com/docs/cli#windows-npm
+1. Ensure you have Firebase CLI installed. If not, follow steps here: https://firebase.google.com/docs/cli#windows-npm
     - You can install Firebase CLI via npm. (You must have Node installed first)
     ```    
     npm install -g firebase-tools
     ```
-14. Please log in to gain access to Firebase backend so you can push changes via CLI 
+2. Please log in to gain access to Firebase backend so you can push changes via CLI 
     ```    
     firebase login
     ```
     This will open your browser. Log into Google with dbklab credentials. You can redirect back after this.
 
-15. Next, run `flutter build web` need to re-build the flutter app. This may take a while as it compiles `.dart` code to HTML/JS
+3. Next, run `flutter build web` need to re-build the flutter app. This may take a while as it compiles `.dart` code to HTML/JS
 ```
 flutter build web
 ``` 
-16. Next run `firebase deploy` inside the flutter app directory and it should deploy new version to `jobs.dbknews.com` automatically with the latest data.
+4. Next run `firebase deploy` inside the flutter app directory and it should deploy new version to `jobs.dbknews.com` automatically with the latest data.
 ```
 firebase deploy
 ```
 
-17. You can check the latest deployed version via the Firebase Console here:
+5. You can check the latest deployed version via the Firebase Console here:
 -  https://console.firebase.google.com/u/0/project/dbk-salary-guide/hosting/sites
 - Make sure you are logged into google with the DBK Lab account
 
