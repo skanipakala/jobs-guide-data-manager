@@ -19,9 +19,10 @@
 
 ### Easiest way to update wage data & sync to Firebase 👈🏻
 
-1. Clone this repo
-2. Make sure you have downloaded the api keys `.json` file (check Slack or contact me)
-3. Run `updateWageData.py` and follow on-screen instructions
+1. Make sure you add the new data to Excel file called `student_wages_tags.xlsx` in the `scripts/` folder. Each years data is a new "sheet", shown at the bottom of the Excel. Must be titled in correct year format like "2018", "2049"
+2. Clone this repo
+3. Make sure you have downloaded the `JOBS_GUIDE_KEY.json` file (check Dev slack or contact me)
+4. Run `updateWageData.py` and follow on-screen instructions
 
 ```
 pip install -r requirements.txt
@@ -34,6 +35,10 @@ Now run the file `updateWageData.py` with the below command. This will generate 
 ```
 python updateWageData.py
 ```
+
+> That's it! Visit https://jobs.dbknews.com/ to see changes after it propagates ✅
+
+---
 
 ### Manually update data (Slow and for emergencies)
 

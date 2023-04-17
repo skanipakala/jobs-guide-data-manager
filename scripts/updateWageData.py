@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[6]:
+# In[4]:
 
 
 import sys
@@ -23,7 +23,6 @@ print("###############################################\n"
 
 
 # ⚠️ Please see ReadMe.md before attempting to modify code here! ⚠️
-
 print("⚠️ Start year is fixed at 2018 ")
 user_input = input(
     "Please enter END year after updating student_wages_tags.xlsx > ")
@@ -45,7 +44,7 @@ except ValueError:
 years = [str(year) for year in range(2018, end_year + 1)]
 print("YearList = ", years)
 years.append("2022")
-print("⚠️ Reference year (2022) selected by default. ⚠️")
+print("⚠️ Reference year (2022) selected by default. ⚠️\n\n")
 
 # years = ['2018', '2019', '2020', '2021', '2022']
 
@@ -58,6 +57,23 @@ for curYear in years:
     df = pd.read_excel('../imports/student_wages_tags.xlsx',
                        sheet_name=curYear)
     print("✅ Excel read success for year ", curYear)
+
+    emptyTagsOk = False
+    if 'tags' not in df.columns:
+        print("Column 'name' exists!")
+        print("Missing 'tags' column in Excel for year ", curYear)
+        ignore_tags = input("Continue without adding tags for year {}? YES/NO\n>>".format(curYear))
+
+        if "N" in ignore_tags.upper():
+            print("Add a tags column for year {} and run program again".format(curYear))
+            print("Quitting DataManager Program....")
+            sys.exit()
+        elif "Y" in ignore_tags.upper():
+            print("[Override] Continuing with empty tags for current year {}".format(curYear)) 
+            emptyTagsOk = True
+             
+
+
     masterList = []
     for index, row in df.iterrows():
         workgp = row['Workgroup']
@@ -71,17 +87,26 @@ for curYear in years:
             edu = "graduate"
 
         unitSplit = str(row['Unit']).split("-")
-
+        
         tagList = []
-        tag = row['tags']
 
-        if tag == np.nan or pd.isnull(tag) or "EMPTY" in str(tag).upper():
-            tag = ""
-            tagList = []
-        else:
-            tag = str(tag)
-            for t in tag.split(","):
-                tagList.append(t.strip())
+        try:
+            tag = row['tags']
+
+            if tag == np.nan or pd.isnull(tag) or "EMPTY" in str(tag).upper():
+                tag = ""
+                tagList = []
+            else:
+                tag = str(tag)
+                for t in tag.split(","):
+                    tagList.append(t.strip())
+        except:
+            if emptyTagsOk == True:
+                tagList = []
+            else:
+                print("ISSUE WITH READING TAGS...Exiting")
+                sys.exit()
+            
 
         obj = {
             'education': edu,
@@ -187,7 +212,7 @@ with open("../exports/unitToWorkgroup.json", "w") as outfile:
 print("✅ unitToWorkgroup.json -> write success")
 
 
-# In[4]:
+# In[ ]:
 
 
 print("Analyzing filters for departmentToUnit.json")
@@ -216,7 +241,7 @@ with open("../exports/departmentToUnit.json", "w") as outfile:
 print("✅ departmentToUnit.json -> write success")
 
 
-# In[5]:
+# In[ ]:
 
 
 import os
@@ -256,5 +281,5 @@ for filename in os.listdir(dir_path):
             blob.upload_from_file(file)
             print(f"🔃 {filename} uploaded to Firebase storage.")
 
-print("ALL TASKS COMPLETED (please exit now)")
+print("ALL TASKS COMPLETED 😀 (please exit now)")
 
