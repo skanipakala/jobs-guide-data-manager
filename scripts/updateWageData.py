@@ -1,13 +1,26 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[6]:
 
 
 import sys
 import numpy as np
 import json
 import pandas as pd
+
+
+print("###############################################\n"
+      "#                                             #\n"
+      "#     Welcome to DBK Jobs Guide Data Manager  #\n"
+      "#                                             #\n"
+      "#              Version 1.1 (beta)             #\n"
+      "#                                             #\n"
+      "#        Developed by Sri Kanipakala          #\n"
+      "#          (skanipakala@gmail.com)            #\n"
+      "#                                             #\n"
+      "###############################################")
+
 
 # ⚠️ Please see ReadMe.md before attempting to modify code here! ⚠️
 
@@ -174,7 +187,7 @@ with open("../exports/unitToWorkgroup.json", "w") as outfile:
 print("✅ unitToWorkgroup.json -> write success")
 
 
-# In[ ]:
+# In[4]:
 
 
 print("Analyzing filters for departmentToUnit.json")
@@ -203,7 +216,7 @@ with open("../exports/departmentToUnit.json", "w") as outfile:
 print("✅ departmentToUnit.json -> write success")
 
 
-# In[33]:
+# In[5]:
 
 
 import os
@@ -226,9 +239,7 @@ cred = credentials.Certificate(credentials_file)
 
 firebase_app = firebase_admin.initialize_app(cred, {
     'storageBucket': 'dbk-salary-guide.appspot.com'
-   
 },
-name='firebase_app'
 )
 
 
