@@ -25,7 +25,7 @@ print("###############################################\n"
 # ⚠️ Please see ReadMe.md before attempting to modify code here! ⚠️
 print("⚠️ Start year is fixed at 2018 ")
 user_input = input(
-    "Please enter END year after updating student_wages_tags.xlsx > ")
+    "▶️ Please enter END year after updating student_wages_tags.xlsx > ")
 # Print the user's input
 
 try:
@@ -39,12 +39,26 @@ except ValueError:
     print("❌ Invalid year format")
     sys.exit(0)
 
+ref_year = 2022
+try:
+    user_input = input(
+    "▶️ Please enter reference year for jobs guide filters (usually latest year)> ")
+    ref_year = int(user_input)
+    if len(user_input) != 4 or end_year < 0:
+        print("❌ Invalid year format")
+        sys.exit(0)
+    else:
+        print("✅ Selected Reference year = ", end_year)
+except ValueError:
+    print("❌ Invalid year format")
+    sys.exit(0)
+
+
 # If adding another year, append to this array here
 # years = list(range(2018, end_year + 1))
 years = [str(year) for year in range(2018, end_year + 1)]
 print("YearList = ", years)
-years.append("2022")
-print("⚠️ Reference year (2022) selected by default. ⚠️\n\n")
+years.append(str(ref_year))
 
 # years = ['2018', '2019', '2020', '2021', '2022']
 
@@ -62,7 +76,7 @@ for curYear in years:
     if 'tags' not in df.columns:
         print("Column 'name' exists!")
         print("Missing 'tags' column in Excel for year ", curYear)
-        ignore_tags = input("Continue without adding tags for year {}? YES/NO\n>>".format(curYear))
+        ignore_tags = input("▶️ Continue without adding tags for year {}? YES/NO\n>>".format(curYear))
 
         if "N" in ignore_tags.upper():
             print("Add a tags column for year {} and run program again".format(curYear))
@@ -193,7 +207,7 @@ unitToWorkgroup = dict()
 for unit in export['unique_unit']:
     unitToWorkgroup[unit] = set()
 
-for entry in data['2022']:   
+for entry in data[str(ref_year)]:   
     unitToWorkgroup[entry['unit']].add(entry['workgroup'])
 
 # print(unitToWorkgroup)
@@ -222,7 +236,7 @@ departmentToUnit = dict()
 for dept in export['unique_department']:
     departmentToUnit[dept] = set()
 
-for entry in data['2022']:   
+for entry in data[str(ref_year)]:   
     departmentToUnit[entry['department']].add(entry['unit'])
 
 # print(unitToWorkgroup)
@@ -253,7 +267,7 @@ from os.path import join, dirname, abspath
 
 # Prompt user for credentials file until a valid .json file is provided
 while True:
-    credentials_file = input("Enter the path to your Firebase credentials .json file: ")
+    credentials_file = input("▶️ Enter the path to your Firebase credentials .json file: ")
     if credentials_file.endswith(".json") and os.path.isfile(credentials_file):
         break
     print("Invalid file. Please provide a valid .json file.")
@@ -272,7 +286,7 @@ bucket = storage.bucket()
 
 # Loop through all files in a directory and upload only .json files to Firebase storage
 
-dir_path = input("Enter directory path of .json files: \nDefault path is ../exports/ if running inside scripts folder\n>>")
+dir_path = input("▶️ Enter directory path of .json files: \nDefault path is ../exports/ if running inside scripts folder\n>>")
 for filename in os.listdir(dir_path):
     if filename.endswith(".json"):
         file_path = join(dir_path, filename)
